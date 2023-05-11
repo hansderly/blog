@@ -9,7 +9,24 @@ RSpec.describe 'Users', type: :request do
 
     it 'index template was rendered' do
       get users_path
+
       expect(response).to render_template(:index)
+    end
+  end
+
+  describe 'GET /show' do
+    let!(:user) { User.create(name: 'Hans', posts_counter: 0) }
+
+    it 'response 200' do
+      get user_path(user.id)
+
+      expect(response.status).to eq(200)
+    end
+
+    it 'render show' do
+      get user_path(user.id)
+
+      expect(response).to render_template(:show)
     end
   end
 end
