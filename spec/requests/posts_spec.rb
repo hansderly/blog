@@ -20,13 +20,13 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /show' do
     let!(:post) { Post.create(author: user, title: 'Long leave Javascript', comments_counter: 0, likes_counter: 0) }
 
-    it 'response status is success' do
+    it 'response 200' do
       get user_post_path(user, post)
 
       expect(response.status).to eq(200)
     end
 
-    it 'show template was rendered' do
+    it 'render template ' do
       get user_post_path(user, post)
 
       expect(response).to render_template(:show)
