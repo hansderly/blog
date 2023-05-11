@@ -16,4 +16,20 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:index)
     end
   end
+
+  describe 'GET /show' do
+    let!(:post) { Post.create(author: user, title: 'Long leave Javascript', comments_counter: 0, likes_counter: 0) }
+
+    it 'response status is success' do
+      get user_post_path(user, post)
+
+      expect(response.status).to eq(200)
+    end
+
+    it 'show template was rendered' do
+      get user_post_path(user, post)
+
+      expect(response).to render_template(:show)
+    end
+  end
 end
