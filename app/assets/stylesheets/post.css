@@ -1,0 +1,29 @@
+.last_3_post-title {
+	margin: 10px 0;
+}
+
+.posts {
+	display: grid;
+	gap: 1rem;
+}
+
+.post {
+	border: 2px solid #ddd;
+	padding: 10px;
+}
+
+.post-stat {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.all-posts {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.all-btn {
+	border: 2px solid #ddd;
+	padding: 15px;
+}

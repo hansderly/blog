@@ -30,3 +30,7 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
+.user-bio {
+	margin: 10px 0;
+}
