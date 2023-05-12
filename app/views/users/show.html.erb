@@ -1,6 +1,6 @@
 <section class="layout-container">
   <% if !@user.nil? %>
-      <%= render partial: 'user', locals: { user: @user, name_as_link: false } %>
+      <%= render partial: 'user', locals: { user: @user } %>
 
       <div class="user-bio">
         <h3 class="bio-title">Bio</h3>
