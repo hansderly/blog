@@ -1,7 +1,15 @@
-<div class="post">
-  <h4><%= post.title %></h4>
-  <%= post.text %>
-  <div class="post-stat">
-    Comments: <%= post.comments_counter %> | Likes: <%= post.likes_counter %>
+<div class="post-comment">
+  <div class="post">
+    <h4><%= post.title %></h4>
+    <%= post.text %>
+    <div class="post-stat">
+      Comments: <%= post.comments_counter %> | Likes: <%= post.likes_counter %>
+    </div>
+  </div>
+
+  <div class="comments">
+    <h4>Comments</h4>
+    <%= render partial: 'posts/comment', collection: post.comments, as: :comment %>
   </div>
 </div>
+
