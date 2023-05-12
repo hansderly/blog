@@ -1,0 +1,7 @@
+.comments {
+	display: grid;
+	gap: 0.5rem;
+	border: 2px solid #ddd;
+	padding: 10px;
+	font-size: 14px;
+}
