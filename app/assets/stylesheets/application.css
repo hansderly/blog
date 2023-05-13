@@ -17,28 +17,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
-	color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .layout-container {
-	max-width: 1024px;
-	margin-inline: auto;
-	padding-inline: 1rem;
-	margin-top: 25px;
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  margin-top: 25px;
 }
