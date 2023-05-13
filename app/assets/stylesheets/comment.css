@@ -1,18 +1,18 @@
 .comments {
-	display: grid;
-	gap: 0.5rem;
-	border: 2px solid #ddd;
-	padding: 10px;
-	font-size: 14px;
+  display: grid;
+  gap: 0.5rem;
+  border: 2px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .new-btn-wrapper {
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .new-btn {
-	border: 2px solid #ddd;
-	padding: 10px;
+  border: 2px solid #ddd;
+  padding: 10px;
 }
