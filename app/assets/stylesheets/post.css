@@ -27,3 +27,19 @@
 	border: 2px solid #ddd;
 	padding: 15px;
 }
+
+.full-post {
+	border: 2px solid #ddd;
+	padding: 10px;
+}
+
+.post-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.post-text {
+	margin-bottom: 10px;
+}
