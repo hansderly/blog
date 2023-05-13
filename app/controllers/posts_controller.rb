@@ -4,5 +4,7 @@ class PostsController < ApplicationController
     @posts = @user.all_posts
   end
 
-  def show; end
+  def show
+    @post = Post.includes(:comments).find(params[:id])
+  end
 end
