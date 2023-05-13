@@ -1,1 +1,6 @@
-<h1>user/post/</h1>
+<section class="layout-container ">
+    <%= render @user %>
+    <div class="posts">
+      <%= render partial: 'users/post', collection: @posts, locals: {display: true} %>
+    </div>
+  </section>
