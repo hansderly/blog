@@ -13,4 +13,19 @@ RSpec.describe User, type: :system do
   before { post_two.save }
   before { post_tree.save }
 
+  # Index page
+  # describe 'index page' do
+  #   it 'shows the rendering of user Hans name' do
+  #     visit '/'
+  #     expect(page).to have_content('Hans')
+  #   end
+  # end
+
+  # Show page
+  describe 'show page' do
+    it "should display the user's profile picture." do
+      visit "/users/#{subject.id}"
+      expect(page.find('img')['src']).to have_content subject.photo
+    end
+  end
 end
