@@ -52,5 +52,10 @@ RSpec.describe Post, type: :system do
       visit "/users/#{user.id}/posts/#{subject.id}"
       expect(page.find('.post-title')).to have_content subject.likes_counter.to_s
     end
+
+    it 'Show the text or body of a post on posts#index' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page.find('.post-text')).to have_content subject.text
+    end
   end
 end
