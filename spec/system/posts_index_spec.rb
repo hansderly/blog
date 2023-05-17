@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe Post, type: :system do
@@ -68,4 +67,3 @@ RSpec.describe Post, type: :system do
     end
   end
 end
-

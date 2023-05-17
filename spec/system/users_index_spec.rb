@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe User, type: :system do
@@ -47,5 +46,4 @@ RSpec.describe User, type: :system do
       expect(page).to have_current_path("/users/#{hans.id}", ignore_query: true)
     end
   end
-
 end
