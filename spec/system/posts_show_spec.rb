@@ -23,7 +23,6 @@ RSpec.describe Post, type: :system do
   before { comment.save }
   before { comment_two.save }
 
-
   # SHOW PAGE CAPYBARA
   describe 'show page' do
     it 'Show the post title on posts#show' do
