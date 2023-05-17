@@ -28,4 +28,12 @@ class PostsTest < ApplicationSystemTestCase
       assert_text post.comments[0].text
     end
   end
+  test 'Amount of comments and likes of each post is being displayed' do
+    user = users(:one)
+    visit user_posts_path(user)
+    user.posts.each do |post|
+      assert_text "Comments: #{post.comments_counter}"
+      assert_text "Likes: #{post.likes_counter}"
+    end
+  end
 end
