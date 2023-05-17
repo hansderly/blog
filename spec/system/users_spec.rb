@@ -47,5 +47,10 @@ RSpec.describe User, type: :system do
       visit "/users/#{subject.id}"
       expect(page).to have_selector('.post-comment', count: 3)
     end
+
+    it 'should render a button that lets me view all the posts of the user' do
+      visit "/users/#{subject.id}"
+      expect(page).to have_content 'See all posts'
+    end
   end
 end
