@@ -37,5 +37,10 @@ RSpec.describe User, type: :system do
       visit "/users/#{subject.id}"
       expect(page.find('.post-counter')).to have_content subject.posts_counter.to_s
     end
+
+    it 'should render the  bio of the user' do
+      visit "/users/#{subject.id}"
+      expect(page.find('.bio-text')).to have_content subject.bio.to_s
+    end
   end
 end
