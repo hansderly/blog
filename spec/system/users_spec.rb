@@ -58,5 +58,11 @@ RSpec.describe User, type: :system do
       find("#show-post-#{post_one.id}").click
       expect(page).to have_current_path("/users/#{subject.id}/posts/#{post_one.id}", ignore_query: true)
     end
+
+    it 'should redirect me to the post index page when the user clicks on see all posts' do
+      visit "/users/#{subject.id}"
+      find('.all-posts').click
+      expect(page).to have_current_path("/users/#{subject.id}/posts", ignore_query: true)
+    end
   end
 end
