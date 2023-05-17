@@ -32,5 +32,10 @@ RSpec.describe User, type: :system do
       visit "/users/#{subject.id}"
       expect(page).to have_content(subject.name)
     end
+
+    it 'should render the  number of posts the user has written.' do
+      visit "/users/#{subject.id}"
+      expect(page.find('.post-counter')).to have_content subject.posts_counter.to_s
+    end
   end
 end
