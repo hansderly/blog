@@ -47,5 +47,10 @@ RSpec.describe Post, type: :system do
       visit "/users/#{user.id}/posts/#{subject.id}"
       expect(page.find('.post-title')).to have_content subject.comments_counter.to_s
     end
+
+    it 'Show the number of likes of a post on posts#index' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page.find('.post-title')).to have_content subject.likes_counter.to_s
+    end
   end
 end
