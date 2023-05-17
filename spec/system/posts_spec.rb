@@ -57,5 +57,10 @@ RSpec.describe Post, type: :system do
       visit "/users/#{user.id}/posts/#{subject.id}"
       expect(page.find('.post-text')).to have_content subject.text
     end
+
+    it 'Show the name of the comment owner of a post on posts#index' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page.find("#comment-#{comment.id}")).to have_content user.name
+    end
   end
 end
