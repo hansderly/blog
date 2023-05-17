@@ -42,5 +42,10 @@ RSpec.describe User, type: :system do
       visit "/users/#{subject.id}"
       expect(page.find('.bio-text')).to have_content subject.bio.to_s
     end
+
+    it 'should render the  3 first posts of the user' do
+      visit "/users/#{subject.id}"
+      expect(page).to have_selector('.post-comment', count: 3)
+    end
   end
 end
