@@ -52,5 +52,11 @@ RSpec.describe User, type: :system do
       visit "/users/#{subject.id}"
       expect(page).to have_content 'See all posts'
     end
+
+    it 'should redirect me to the show page of that post when the user clicks on the post' do
+      visit "/users/#{subject.id}"
+      find("#show-post-#{post_one.id}").click
+      expect(page).to have_current_path("/users/#{subject.id}/posts/#{post_one.id}", ignore_query: true)
+    end
   end
 end
