@@ -37,5 +37,10 @@ RSpec.describe Post, type: :system do
       visit "/users/#{user.id}/posts/#{subject.id}"
       expect(page).to have_content subject.title
     end
+
+    it 'shows the User name who owns the post' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page).to have_content(user.name)
+    end
   end
 end
