@@ -62,5 +62,10 @@ RSpec.describe Post, type: :system do
       visit "/users/#{user.id}/posts/#{subject.id}"
       expect(page.find("#comment-#{comment.id}")).to have_content user.name
     end
+
+    it 'Show the text of the comment of a post on posts#index' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page.find("#comment-#{comment.id}")).to have_content comment.text
+    end
   end
 end
