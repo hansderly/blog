@@ -24,4 +24,18 @@ RSpec.describe Post, type: :system do
   before { comment_two.save }
 
   # INDEX PAGE CAPYBARA
+  # describe 'index page' do
+  #   it 'show the user profile picture' do
+  #     visit user_path(user)
+  #     expect(page.find('img')['src']).to have_content user.photo
+  #   end
+  # end
+
+  # SHOW PAGE CAPYBARA
+  describe 'show page' do
+    it 'Show the post title on posts#show' do
+      visit "/users/#{user.id}/posts/#{subject.id}"
+      expect(page).to have_content subject.title
+    end
+  end
 end
