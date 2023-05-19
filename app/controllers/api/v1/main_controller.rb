@@ -1,4 +1,4 @@
-class Api::V0::MainController < ApplicationController
+class Api::V1::MainController < ApplicationController
   before_action :authenticate
 
   private
