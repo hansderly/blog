@@ -6,5 +6,4 @@ class Api::V1::CommentsController < Api::V1::MainController
     render json: @post.comments
   end
 
-
 end
